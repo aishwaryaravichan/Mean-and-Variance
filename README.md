@@ -49,11 +49,7 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ```
 import numpy as np
 
-
-
-
 L = [int(i) for i in input("Enter arrival data: ").split()]
-
 
 N = len(L)
 
@@ -62,10 +58,6 @@ M = max(L)
 X = []
 
 f = []
-
-
-
-
 
 for i in range(M + 1):
 
@@ -81,34 +73,19 @@ for i in range(M + 1):
     
     X.append(i)
 
-
 sf = np.sum(f)
 
-
-
-
-
 p = [f[i] / sf for i in range(M + 1)]
-
 
 # Mean of arrival (expected value)
 
 mean = np.inner(X, p)
 
-
-
-
 EX2 = np.inner(np.square(X), p)
-
-
-
 
 var = EX2 - mean**2
 
 SD = np.sqrt(var)
-
-
-
 
 print("\nX\tp(x)")
 
